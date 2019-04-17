@@ -1,0 +1,3 @@
+2017-08-10 15:44:01 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Table "NEWS" not found; SQL statement:
+select news0_.id as id1_0_, news0_.author as author2_0_, news0_.color as color3_0_, news0_.content as content4_0_, news0_.date as date5_0_, news0_.time as time6_0_, news0_.title as title7_0_, news0_.votes as votes8_0_ from news news0_ [42102-193]

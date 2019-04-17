@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Add news</title>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="stylesheet" href="nav.css"/>
+	<link rel="stylesheet" href="style2.css"/>
+	<script>
+	// <![CDATA[	
+		window.onload = function(){
+			document.getElementById("logout").addEventListener("click", function(){
+		    var xhttp = new XMLHttpRequest();
+		    xhttp.onreadystatechange = function() {
+		    	    if(this.readyState == 4 && this.status == 200) {
+			        	document.open();
+			        	document.write(this.responseText);
+			        	document.close();
+		    	    }
+		    }
+		    xhttp.open("GET", "/logout", true);
+		    xhttp.send(); 		
+		    history.replaceState(null, null, "/");
+			});
+		}
+	// ]]>
+	</script>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><h1><a href="/" th:action="@{/}"><span>Spring</span>News</a></h1></li>
+			<div>
+				<li><a id="logout" sec:authorize="isAuthenticated()">Log out</a></li>
+				<li sec:authorize="isAuthenticated()"><p th:text="${name}"></p></li>
+			</div>
+		</ul>
+	</nav>
+	<main>
+		<h1>Write something...</h1>
+		<form th:action="@{/create}" th:object="${news}" method="post">
+			<input class="form" placeholder="Title" type="text" th:field="*{title}"/>
+			<p th:if="${#fields.hasErrors('title')}" th:errors="*{title}">...</p>
+			<br/>
+			<textarea class="form" placeholder="Content" th:field="*{content}"></textarea>
+			<p th:if="${#fields.hasErrors('content')}" th:errors="*{content}">...</p>
+			<br/>
+			<input id="btn" class="form" type="submit" value="Publish"/>
+		</form> 
+	</main>
+</body>
+</html>

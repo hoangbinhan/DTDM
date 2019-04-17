@@ -1,0 +1,52 @@
+main{
+	margin: 80px auto;
+	max-width: 450px;
+	text-align: center;
+}
+main h1{
+	color: grey;
+	font-size: 35px;
+	font-weight: 100;
+	cursor: default;
+	margin-bottom: 40px;
+}
+.input{
+	width: 90%;
+	padding: 15px;
+	margin: 5px auto;
+	font-size: 18px;
+	background-color: #f5f5f5;
+	color: grey;
+	outline: none;
+	border: none;
+	transition: all 0.2s;
+}
+.input:focus, .input:hover{
+	background-color: white;
+	box-shadow: 0px 3px 5px #bfbfbf;
+}
+.btn{
+	margin-top: 20px;
+	padding: 10px;
+	width: 70%;
+	background-color: white;
+	font-size: 15px;
+	color: grey;
+	border: 1px solid #00ce02;
+	border-radius: 20px;
+	outline: none;
+	transition: all 0.2s;
+}
+.btn:hover{
+	cursor: pointer;
+	background-color: #00ce02;
+	color: white;
+}
+@media (max-width: 730px){
+	nav h1{
+		display: none;
+	}
+	main{
+		width: 90%;
+	}
+}

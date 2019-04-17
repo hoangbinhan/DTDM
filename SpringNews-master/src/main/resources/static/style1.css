@@ -1,0 +1,163 @@
+*{
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+body{
+	background-color: #fafafa;
+}
+main{
+	z-index: 1;
+	width: 75%;
+	margin: 75px auto 15px auto;
+	max-width: 1200px;
+}
+.news{
+	margin-top: 20px;
+	margin-left: 20px;
+	padding: 10px 15px 0px 15px;
+}
+.news div{
+	text-align: center;
+	padding-top: 10px;
+}
+h2{
+	font-size: 26px;
+	font-weight: 100;
+	word-wrap: break-word;
+}
+#cont{
+	color: #272727;
+	line-height: 30px;
+}
+main p{
+	word-wrap: break-word;
+	font-size: 20px;
+	margin: 10px auto;
+	padding: 10px;
+	word-spacing: 4px;
+}
+#votes{
+	display: inline-block;
+	margin-top: -10px;
+	font-size: 10px;
+}
+#votes p{
+	min-width: 70px;
+	padding: 0;
+	margin: 4;
+	font-size: 16px;
+}
+#votes span{
+	display: inline-block;
+	box-shadow: 0px 2px 5px grey;
+	min-width: 24px;
+	margin: 0 auto;
+	padding: 5px 4px;
+	font-size: 17px;
+	font-weight: bold;
+	background-color: white;
+	border-radius: 50%;
+	color: #6b6b6b;
+}
+#votes button{
+	margin: 3px;
+	min-width: 84px;
+	padding: 4px;
+	background-color: inherit;
+	font-weight: bold;
+	border-radius: 13px;
+	border: none;
+}
+#votes button:nth-child(2):hover{
+	cursor: pointer;
+	color: white !important;
+	background-color: #00ce02 !important;
+}
+#votes button:nth-child(3):hover{
+	cursor: pointer;
+	color: white !important;
+	background-color: red !important;
+}
+.datetime{
+	text-align: right;
+	float: right;
+}
+.datetime p{
+	font-size: 13px;
+	color: grey;
+	margin: 0;
+	padding: 0;
+}
+.rbtn{
+	border: none;
+	text-decoration: none;
+	background-color: inherit;
+	margin-right: -100px;
+	float: left;
+	padding: 8px;
+	color: red;	
+	transition: all 0.2s;
+}
+.rbtn:hover{
+	background-color: #f78571;
+	cursor: pointer;
+	color: white;
+}
+.clear{
+	clear: both;
+}
+@media (max-width: 720px){
+	main, nav ul{
+		width: 100%;
+	}
+	.news{
+		width: 90%;
+		margin-left: 0px;
+	}
+	h2{
+		font-size: 24px;
+	}
+	#cont{
+		font-size: 18px;
+		padding: 3px;
+	}
+	.rbtn{
+		margin-right: 0;
+	}
+	#votes button{
+		min-width: 70px;
+	}
+	nav #title{
+	 	padding-right: 2px;
+	}	
+	nav{
+		height: 63px;
+	}
+	li h1{
+		margin-top: 16px;
+	 	font-size: 24px;
+	}
+	li input{
+		font-size: 28px;
+	}
+	.topnav{
+	 	display: none;
+	}
+	#show{
+		display: block;
+	}
+	#show:hover{
+		box-shadow: 0px 0px 4px grey;
+		cursor: pointer;
+	}	
+	.topnav.responsive{
+		display: block;
+		position: absolute;
+		top: 66px;
+		right: 0;
+		background-color: white;
+		border-left: 1px solid #bfbfbf;
+		border-bottom: 1px solid #bfbfbf;
+	}
+}
